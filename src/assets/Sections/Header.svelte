@@ -8,6 +8,9 @@
     <h1>TRAVEL</h1>
     <p>A journey across places you never thought imagineable</p>
   </div>
+
+  <div class="line-style left"></div>
+  <div class="line-style right"></div>
 </section>
 
 <!-- 320px — 480px: Mobile devices.
@@ -17,55 +20,83 @@
 1201px and more — Extra large screens, TV. -->
 
 <style>
+  .line-style {
+    position: absolute;
+    width: 320px;
+    height: 3px;
 
-    /*mobile*/
+    background-color: white;
+  }
+
+  .line-style.left {
+    left: 20px;
+    bottom: 90px;
+  }
+
+  .line-style.right {
+    right: 20px;
+    bottom: 90px;
+  }
+
+  /*mobile*/
   .header-section {
     position: relative;
-    min-height: 360px;
+    min-height: 320px;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   img {
     position: absolute;
     width: 100%;
-    height: 100%;
+
     top: 0;
   }
 
   .header-box {
-    position:relative;
+    position: relative;
     z-index: 2;
     padding: 2em;
     text-align: center;
-
   }
-  
-  .header-box::after {
-    position:absolute;
-    content:'';
-    bottom:50px;
-    width:100%;
-    height:5px;
-    left:0;
-    z-index:1;
 
+  .header-box::after {
+    position: absolute;
+    content: "";
+    bottom: 50px;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    z-index: 1;
   }
 
   p {
-    width:260px;
+    width: 260px;
   }
 
   /* tablet */
-  @media(min-width:769px){
+  @media (min-width: 481px) {
+    .header-section {
+      min-height: 480px;
+    }
+
+    .line-style.left {
+    left: 20px;
+    bottom: 150px;
+  }
+
+  .line-style.right {
+    right: 20px;
+    bottom: 150px;
+  }
     p {
       width: 300px;
     }
   }
-
 
   /* desktop */
   @media (min-width: 1025px) {
@@ -80,27 +111,45 @@
     img {
       position: absolute;
       width: 100%;
-      height:auto;
+      height: auto;
     }
 
     .header-box {
-      height:50%;
-      line-height:100px;
+      height: 50%;
+      line-height: 100px;
     }
 
-
     p {
-    margin-top:1em;
-    line-height:40px;
-    width:460px;
+      margin-top: 1em;
+      line-height: 40px;
+      width: 460px;
+    }
+
+    .line-style.left {
+      left: 20px;
+      bottom: 230px;
+    }
+
+    .line-style.right {
+      right: 20px;
+      bottom: 230px;
     }
   }
 
-  @media(min-width:1320px){
-    
+  @media (min-width: 1320px) {
     .header-box {
-      height:auto;
-      line-height:100px;
+      height: auto;
+      line-height: 100px;
+    }
+
+    .line-style.left {
+      left: 20px;
+      bottom: 50px;
+    }
+
+    .line-style.right {
+      right: 20px;
+      bottom: 50px;
     }
   }
 
@@ -112,7 +161,6 @@
   p {
     font-size: clamp(1rem, -1.625rem + 4.6667vw, 1.875rem);
     text-transform: uppercase;
-    display:inline-block;
-
+    display: inline-block;
   }
 </style>
