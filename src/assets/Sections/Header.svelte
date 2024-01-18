@@ -22,7 +22,7 @@
 <style>
   .line-style {
     position: absolute;
-    width: 320px;
+    width: 120px;
     height: 3px;
 
     background-color: white;
@@ -30,12 +30,12 @@
 
   .line-style.left {
     left: 20px;
-    bottom: 90px;
+    bottom: 50px;
   }
 
   .line-style.right {
     right: 20px;
-    bottom: 90px;
+    bottom: 50px;
   }
 
   /*mobile*/
@@ -53,7 +53,7 @@
   img {
     position: absolute;
     width: 100%;
-
+    height:100%;
     top: 0;
   }
 
@@ -86,12 +86,12 @@
 
     .line-style.left {
     left: 20px;
-    bottom: 150px;
+    bottom: 50px;
   }
 
   .line-style.right {
     right: 20px;
-    bottom: 150px;
+    bottom: 50px;
   }
     p {
       width: 300px;
@@ -102,7 +102,7 @@
   @media (min-width: 1025px) {
     .header-section {
       position: relative;
-      height: 100vh;
+      height: 90vh;
       width: 100%;
       overflow: hidden;
       display: flex;
@@ -111,11 +111,11 @@
     img {
       position: absolute;
       width: 100%;
-      height: auto;
+      height: 100vh;
     }
 
     .header-box {
-      height: 50%;
+      height: 30%;
       line-height: 100px;
     }
 
@@ -127,16 +127,24 @@
 
     .line-style.left {
       left: 20px;
-      bottom: 230px;
+      bottom: 50px;
     }
 
     .line-style.right {
       right: 20px;
-      bottom: 230px;
+      bottom: 50px;
     }
   }
 
   @media (min-width: 1320px) {
+
+    .header-section {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+    }
     .header-box {
       height: auto;
       line-height: 100px;
