@@ -6,7 +6,7 @@
 
 <section class="about-section">
 
-    <img class="about-background" src="./images/travel-img-3.jpg" alt="404">
+  
 
 
 
@@ -15,6 +15,11 @@
         <h1>EXPLORE THE WORLD YOUR WAY</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, necessitatibus. Inventore, nam! Architecto sapiente, quibusdam illum omnis rerum maxime fuga eaque inventore cum nam ea consequatur tempora laudantium optio. Dignissimos.</p>
     </div>
+
+    <div class="about-added-text"></div>
+
+
+
 </section>
 
 <style>
@@ -23,24 +28,21 @@
         min-height:70vh;
         display:flex;
         align-items: center;
-        justify-content: space-around;
+        flex-wrap: wrap;
         overflow:hidden;
-        background-color:rgba(0, 0, 0, 0.849);
-        gap:10px;
-    }
+        background-color:#0e0d0d;
+        gap:15px;
 
-    .about-background {
-       position:absolute;
-       opacity:0.05;
-       transform:scale(1);
+        margin:auto;
+        z-index:1;
     }
 
 
     .about-text-box {
         display:inline-block;
         min-width:320px;
-        max-width:750px;
-        text-align: center;
+        max-width:700px;
+        text-align: left;
     }
 
     .about-text-box h1 {
