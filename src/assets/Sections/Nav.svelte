@@ -61,6 +61,7 @@
         top:10px;;
 
         border-radius:10px;
+        box-shadow:0px 0px 15px 2px rgba(0, 0, 0, 0.13);
 
         left: 50%;
         transform: translate(-50%, 0);
