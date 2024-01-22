@@ -12,6 +12,10 @@
         <a href="#">ABOUT</a>
         <a href="#">SERVICE</a>
     </ul>
+
+    <div class="nav-button">
+        <img src="./images/nav-button-right.svg" alt="">
+    </div>
 </nav>
 
 
@@ -25,7 +29,20 @@
         position:fixed;
         z-index:5;
         top:0;
+    }
 
+    .nav-button {
+        display:block;
+        position:relative;
+
+        width:55px;
+        height:55px;
+        z-index:11;
+    }
+
+    .nav-button img {
+        width:100%;
+        height:auto;
     }
 
     .nav-component {
@@ -89,6 +106,10 @@
 
             transform: translate(0%, 0);
     
+        }
+
+        .nav-button {
+            display:none;
         }
 
     @media(min-width:796px){
