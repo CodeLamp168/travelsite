@@ -1,13 +1,25 @@
 <script>
+  import { fly, fade } from 'svelte/transition';
+  let scrollValue
 </script>
 
-<section class="header-section">
-  <img src="images/mountain-header.jpg" alt="" />
+<svelte:window bind:scrollY={scrollValue}/>
 
-  <div class="header-box">
-    <h1>TRAVEL</h1>
-    <p>A journey across places you never thought imagineable</p>
+
+
+<section class="header-section" transition:fly={{ y: 50, duration:500 }}>
+  <img src="images/mountain-header.jpg" alt=""/>
+
+  {#if scrollValue >= 0}
+
+  <div class="header-box" >
+    <h1 transition:fly={{ y: 50, duration:1000 }}>TRAVEL</h1>
+    <p transition:fly={{ y: 50, duration:1200 }}>A journey across places you never thought imagineable</p>
   </div>
+
+  {/if}
+
+ 
 
   <div class="line-style left"></div>
   <div class="line-style right"></div>
