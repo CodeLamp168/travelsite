@@ -1,127 +1,159 @@
 <script>
+ let isNavOpen = false 
+
+const handleDropdownClick = () => {
+  isNavOpen = !isNavOpen 
+  console.log('click')
+}
 
 
 </script>
 
-
 <nav>
-    <h2>TRAVEL LOGO</h2>
+  <h2 class="main-logo">TRAVEL LOGO</h2>
 
-    <ul class="nav-component mobile desktop">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SERVICE</a>
-    </ul>
+  <ul class="nav-component mobile desktop" id="nav-bar" style:transform={isNavOpen ? 'translate(0%)' : 'translateX(150%)'}>
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">SERVICE</a>
 
-    <div class="nav-button">
-        <img src="./images/nav-button-right.svg" alt="">
-    </div>
+    <button class="nav-button nav-exit" id="exit-btn" on:click={handleDropdownClick}>
+      <img src="./images/nav-button-exit.svg" alt="404" />
+    </button>
+  </ul>
+
+  <button class="nav-button nav-open" id="open-btn" on:click={handleDropdownClick}>
+    <img src="./images/nav-button-right.svg" alt="404" />
+  </button>
 </nav>
 
-
 <style>
-    nav {
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        width:100%;
-        padding:10px 10px;
-        position:fixed;
-        z-index:5;
-        top:0;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 10px;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+  }
 
-    .nav-button {
-        display:block;
-        position:relative;
+  .main-logo {
+    text-shadow: 0px 0px 4px rgba(4, 0, 0, 1);
+   
+  }
 
-        width:55px;
-        height:55px;
-        z-index:11;
-    }
+  .nav-button {
+    display: block;
+    position: relative;
+    z-index: 11;
+    cursor: pointer;
+    border:none;
+    background:none;
+    transition: transform 0.2s ease-in;
+  }
 
-    .nav-button img {
-        width:100%;
-        height:auto;
-    }
+  .nav-button:hover {
+    transform: scale(1.1);
+  }
 
-    .nav-component {
-        position:fixed;
-        display:flex;
-        align-items: center;
-        justify-content: center;
+  .nav-open {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-exit {
+    left:20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-button img {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-component {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+    z-index: 10;
+
+    transition: transform 100ms ease-in;
+  }
+
+  .nav-component a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 1em;
+    background-color: #ffffff;
+    gap: 20px;
+
+    left: 0%;
+    top: 0px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.479);
 
 
-        gap:30px;
-        z-index:10;
+    z-index: 20;
+  }
 
-        
-    }
-
-    .nav-component a {
-        text-decoration: none;
-        color:black;
-        font-weight:700;
-        letter-spacing: 1px;
-    }
-
-
-    .mobile {
-        display:none;
-        flex-direction: column;
-        width:320px;
-        padding:1em;
-        background-color:#ffffff;
-        gap:20px;
-
-        left:0%;
-        top:10px;;
-
-        border-radius:10px;
-        box-shadow:0px 0px 15px 2px rgba(0, 0, 0, 0.13);
-
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-
-    /* .mobile.active {
+  /* .mobile.active {
         right:0%;
     } */
 
-    @media(min-width:481px){
+  @media (min-width: 481px) {
+    .desktop {
+      display: inline-flex;
+      flex-direction: row;
 
-        .desktop {
-            display:inline-flex;
-            flex-direction: row ;
-
-            width:auto;
-            height:auto;
-            bottom:auto;
-
-            left:auto;
-            right:0%;
-            background:white;
-            padding:0.8em 1em;
-            gap:2em;
-
-            transform: translate(0%, 0);
-    
-        }
-
-        .nav-button {
-            display:none;
-        }
-
-    @media(min-width:796px){
-        .desktop {
+      width: auto;
+      height: auto;
+      bottom: auto;
+      left: auto;
+      right:0;
+      margin-top:5px;
+ 
+      background: white;
+      padding: 0.8em 1em;
+      gap: 2em;
 
 
-            padding:0.8em 2em;
-            margin-top:5px;
-            margin-right:2em;
-            gap:2em;
-        }
-    }
+      border-bottom-right-radius: 0px;
+
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.13);
+
+      transform: translateX(0%);
     }
 
+    .nav-exit {
+        left:0px;
+    }
+
+ 
+
+    @media (min-width: 796px) {
+      .desktop {
+        padding: 0.8em 2em;
+
+        gap: 2em;
+      }
+    }
+  }
 </style>
