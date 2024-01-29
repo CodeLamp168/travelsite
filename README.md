@@ -1,7 +1,9 @@
 # TRAVEL SITE TEMPLATE: SVELTE + VITE
-![A desktop size screenshot of the websites hero section](./public/travel-site-display.png);
 
-My first ever time creating a simple static website utilizing Svelte 
+![A desktop size screenshot of the websites hero section](./public/travel-site-display.png)
+
+
+### My first time creating a simple static website utilizing Svelte 
 
 ## What it Contains
 
