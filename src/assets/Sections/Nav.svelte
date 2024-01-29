@@ -12,7 +12,7 @@ const handleDropdownClick = () => {
 <nav>
   <h2 class="main-logo">TRAVEL LOGO</h2>
 
-  <ul class="nav-component mobile desktop" id="nav-bar" style:transform={isNavOpen ? 'translate(0%)' : 'translateX(150%)'}>
+  <ul class="nav-component mobile desktop" id="nav-bar" style:transform={isNavOpen ? 'translate(0%)' : 'translate(150%)'}>
     <a href="#">HOME</a>
     <a href="#">ABOUT</a>
     <a href="#">SERVICE</a>
@@ -51,7 +51,7 @@ const handleDropdownClick = () => {
     cursor: pointer;
     border:none;
     background:none;
-    transition: transform 0.2s ease-in;
+    transition: transforms ease-in;
   }
 
   .nav-button:hover {
@@ -83,7 +83,7 @@ const handleDropdownClick = () => {
     gap: 30px;
     z-index: 10;
 
-    transition: transform 100ms ease-in;
+    transition: transform 300ms ease-in;
   }
 
   .nav-component a {

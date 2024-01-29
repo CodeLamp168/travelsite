@@ -66,7 +66,7 @@
     background-color: white;
     color: black;
     font-size: clamp(1.1875rem, 0.0625rem + 2vw, 1.5625rem);
-    flex-wrap: wrap;
+    flex-wrap:wrap;
   }
 
   .statistics-card {
@@ -78,6 +78,10 @@
     .statistics-card {
       text-align: center;
       margin: 2em 0em;
+    }
+
+    .statistics-section {
+       flex-direction: column;
     }
   }
 

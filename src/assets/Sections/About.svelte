@@ -8,9 +8,9 @@
 <svelte:window bind:scrollY={scrollValue} />
 
 <section class="about-section default">
-    <Queries query="(min-width: 1200px)" let:matches>
+    <Queries query="(min-width: 1026px)" let:matches>
         {#if matches}
-          {#if scrollValue >= 360}
+          {#if scrollValue >= 350}
               <div class="about-text-box" transition:fly={{ y: 50, duration: 1300 }}>
                 <h1>EXPLORE THE WORLD YOUR WAY</h1>
                 <p>
@@ -33,9 +33,9 @@
         {/if}
       </Queries>
       
-      <Queries query="(min-width: 481px) and (max-width: 1199px)" let:matches>
+      <Queries query="(min-width: 481px) and (max-width: 1025px)" let:matches>
         {#if matches}
-          {#if scrollValue >= 10}
+          {#if scrollValue >= 0}
               <div class="about-text-box" transition:fly={{ y: 60, duration:500 }}>
                 <h1>EXPLORE THE WORLD YOUR WAY</h1>
                 <p>
