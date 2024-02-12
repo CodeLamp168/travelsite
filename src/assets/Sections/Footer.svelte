@@ -6,10 +6,9 @@
         <h2>TRAVEL.CO</h2>
         <div
           class="link-policies footer-flex"
-         
         >
           <p>info@thetravelcompany.com</p>
-          <div
+        <div
             class="policies footer-flex"
            
           >
@@ -45,6 +44,16 @@
     gap: 2em;
   }
 
+  .link-policies p {
+    cursor:pointer;
+    transition:transform 300ms ease-in;
+  }
+
+  .link-policies p:hover {
+    transform:scale(1.05);
+    transform:translateY(-3px)
+  }
+
   @media (max-width: 676px) {
     .footer-flex {
       justify-content: center;
@@ -57,6 +66,7 @@
       justify-content: center;
       flex-direction: column;
       gap: 5px;
+      
     }
   }
 </style>

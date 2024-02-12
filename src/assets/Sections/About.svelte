@@ -143,6 +143,7 @@
   }
 
   .about-text-box p {
+
     font-size: clamp(1rem, 0.5982rem + 1.2857vw, 1.5625rem);
   }
 </style>

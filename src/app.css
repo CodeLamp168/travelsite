@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *, *::before, *::after {
   box-sizing:border-box;
   margin:0;
@@ -5,7 +8,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Playfair Display', 'Work Sans', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,7 +21,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   scroll-behavior: smooth;
 }
 
@@ -26,4 +28,12 @@
   position:fixed;
   bottom:0;
   z-index:200;
+}
+
+h1 {
+  font-family:'Playfair Display';
+}
+
+p, h3, a {
+  font-family:'Work Sans';
 }

@@ -10,7 +10,10 @@ const handleDropdownClick = () => {
 </script>
 
 <nav>
-  <h2 class="main-logo">TRAVEL LOGO</h2>
+  <div class="main-logo">
+    <img src="./svgs/mountains.svg" alt="TRAVEL LOGO">
+  </div>
+  
 
   <ul class="nav-component mobile desktop" id="nav-bar" style:transform={isNavOpen ? 'translate(0%)' : 'translate(150%)'}>
     <a href="#">HOME</a>
@@ -39,9 +42,11 @@ const handleDropdownClick = () => {
     top: 0;
   }
 
+
+
   .main-logo {
-    text-shadow: 0px 0px 4px rgba(4, 0, 0, 1);
-   
+
+    filter: drop-shadow(0px 0px 1px  black);
   }
 
   .nav-button {
@@ -70,6 +75,11 @@ const handleDropdownClick = () => {
   }
 
   .nav-button img {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-logo img {
     width: 100%;
     height: auto;
   }
